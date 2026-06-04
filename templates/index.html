@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure KTP Watermarker - Beri Watermark KTP Secara Lokal & Aman</title>
-    <meta name="description" content="Aplikasi pembuat watermark KTP lokal untuk melindungi privasi data identitas Anda tanpa unggah ke internet.">
+    <title>Secure Document Watermarker - Beri Watermark Dokumen Secara Lokal & Aman</title>
+    <meta name="description" content="Aplikasi pembuat watermark dokumen lokal untuk melindungi privasi data sensitif Anda tanpa unggah ke internet.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,12 @@
                     </svg>
                 </div>
                 <div class="brand-text">
-                    <h1>KTP Shield</h1>
+                    <h1>DocShield</h1>
                     <span>Secure Local Watermarker</span>
                 </div>
             </div>
             
-            <p class="description">Lindungi identitas Anda dengan memberi watermark pada scan/foto KTP. Pemrosesan dilakukan <strong>100% lokal</strong> di komputer Anda.</p>
+            <p class="description">Lindungi data sensitif Anda dengan memberi watermark pada dokumen penting. Pemrosesan dilakukan <strong>100% lokal</strong> di komputer Anda.</p>
             
             <hr class="separator">
 
@@ -43,10 +43,10 @@
             <div class="control-group">
                 <label>Preset Cepat</label>
                 <div class="presets-grid">
-                    <button type="button" class="btn-preset" data-template="KTP UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA {date}">Verifikasi Umum</button>
-                    <button type="button" class="btn-preset" data-template="HANYA UNTUK VERIFIKASI\nPENDAFTARAN [NAMA LAYANAN]">Pendaftaran</button>
-                    <button type="button" class="btn-preset" data-template="DOKUMEN PENDUKUNG\nAplikasi [NAMA LAYANAN] - {date}">Dokumen Pendukung</button>
-                    <button type="button" class="btn-preset" data-template="TIDAK UNTUK DISALAHGUNAKAN\nHanya untuk Keperluan [NAMA]">Pencegahan</button>
+                    <button type="button" class="btn-preset" data-template="DOKUMEN UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA {date}">Verifikasi Umum</button>
+                    <button type="button" class="btn-preset" data-template="HANYA UNTUK KEPERLUAN\n[NAMA LAYANAN]\nPADA {date}">Keperluan Khusus</button>
+                    <button type="button" class="btn-preset" data-template="SALINAN DOKUMEN PENDUKUNG\n[NAMA LAYANAN] - {date}">Dokumen Pendukung</button>
+                    <button type="button" class="btn-preset" data-template="RAHASIA & KONFIDENSIAL\nTIDAK UNTUK DISALAHGUNAKAN">Rahasia/Confidential</button>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
-                Unduh Gambar KTP
+                Unduh Gambar Dokumen
             </button>
         </aside>
 
@@ -123,8 +123,8 @@
                             <polyline points="21 15 16 10 5 21"></polyline>
                         </svg>
                     </div>
-                    <h2>Unggah Foto KTP Anda</h2>
-                    <p>Seret & letakkan file gambar KTP di sini, atau klik untuk memilih file</p>
+                    <h2>Unggah Gambar Dokumen Anda</h2>
+                    <p>Seret & letakkan file gambar dokumen di sini, atau klik untuk memilih file</p>
                     <span class="upload-note">Format yang didukung: JPG, PNG, WEBP</span>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                         <p>Memproses gambar...</p>
                     </div>
                     <div class="image-container">
-                        <img id="preview-image" alt="Pratinjau Watermark KTP">
+                        <img id="preview-image" alt="Pratinjau Watermark Dokumen">
                     </div>
                 </div>
             </div>

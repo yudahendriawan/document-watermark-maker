@@ -55,7 +55,7 @@ def add_watermark(
     color_hex="#ffffff" # Warna teks (Hex)
 ):
     """
-    Menambahkan watermark teks ke gambar KTP secara lokal.
+    Menambahkan watermark teks ke gambar dokumen konfidensial secara lokal.
     """
     # Membuka gambar dasar
     if isinstance(image_path, str):
@@ -201,11 +201,11 @@ def add_watermark(
 
 if __name__ == "__main__":
     today_str = datetime.today().strftime("%d-%m-%Y")
-    default_text = f"KTP UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA {today_str}"
+    default_text = f"DOKUMEN UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA {today_str}"
     
-    parser = argparse.ArgumentParser(description="Program Python Watermark KTP Secara Lokal & Aman")
-    parser.add_argument("-i", "--input", required=True, help="Path file gambar KTP input")
-    parser.add_argument("-o", "--output", required=True, help="Path file gambar KTP hasil output")
+    parser = argparse.ArgumentParser(description="Program Python Watermark Dokumen Secara Lokal & Aman")
+    parser.add_argument("-i", "--input", required=True, help="Path file gambar dokumen input")
+    parser.add_argument("-o", "--output", required=True, help="Path file gambar dokumen hasil output")
     parser.add_argument("-t", "--text", default=default_text, help="Teks watermark (gunakan '\\n' untuk baris baru)")
     parser.add_argument("-op", "--opacity", type=int, default=30, help="Opasitas watermark (0-100, default: 30)")
     parser.add_argument("-a", "--angle", type=int, default=30, help="Sudut rotasi watermark (derajat, default: 30)")

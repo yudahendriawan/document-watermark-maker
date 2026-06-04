@@ -1,15 +1,15 @@
-# KTP Shield - Secure Local Watermarker
+# DocShield - Secure Local Document Watermarker
 
 ![Dashboard Screenshot](dashboard.png)
 
-Aplikasi Python sederhana, aman, dan 100% lokal untuk memberikan watermark pada scan/foto KTP (Kartu Tanda Penduduk) guna melindungi data pribadi Anda dari penyalahgunaan. Semua proses dilakukan di komputer Anda tanpa mengunggah file ke internet.
+Aplikasi Python sederhana, aman, dan 100% lokal untuk memberikan watermark pada berkas gambar dokumen sensitif/konfidensial (seperti KTP, kontrak, laporan keuangan, sertifikat, dll.) guna melindungi data pribadi Anda dari penyalahgunaan. Semua proses dilakukan di komputer Anda tanpa mengunggah file ke internet.
 
 ## Fitur Utama
 
-- **100% Lokal**: File KTP Anda tidak pernah dikirim ke internet, diproses sepenuhnya menggunakan pustaka Pillow Python.
+- **100% Lokal**: File dokumen Anda tidak pernah dikirim ke internet, diproses sepenuhnya menggunakan pustaka Pillow Python.
 - **Pola Grid (Tiling)**: Memberikan watermark berulang agar tidak mudah diedit atau dihapus oleh pihak tidak bertanggung jawab.
 - **Pengaturan Lengkap**: Ubah teks kustom, opasitas (transparansi), ukuran font dinamis, rotasi sudut, warna hex, dan kerapatan watermark.
-- **Preset Verifikasi Cepat**: Pilihan template watermark umum (seperti untuk Shopee, bank, dll.) dengan tanggal otomatis.
+- **Preset Verifikasi Cepat**: Pilihan template watermark umum (seperti verifikasi layanan, keperluan khusus, dll.) dengan tanggal otomatis.
 - **Dua Antarmuka**: Tersedia versi **Command Line Interface (CLI)** dan **Aplikasi Web (FastAPI)** yang cantik.
 
 ---
@@ -37,24 +37,24 @@ Aplikasi web menyediakan antarmuka grafis yang ramah pengguna dengan live previe
    ```
 2. Buka browser Anda dan akses:
    [http://127.0.0.1:8000](http://127.0.0.1:8000)
-3. Drag & drop foto KTP Anda (atau gunakan file `dummy_ktp.png` yang sudah disediakan untuk uji coba).
+3. Drag & drop foto/scan dokumen Anda (atau gunakan file `dummy_document.png` yang disediakan untuk uji coba).
 4. Sesuaikan teks, transparansi, ukuran, warna, dan sudut.
-5. Klik **Unduh Gambar KTP** untuk menyimpan hasilnya.
+5. Klik **Unduh Gambar Dokumen** untuk menyimpan hasilnya.
 
 ### 2. Command Line Interface (CLI)
 
 Untuk memproses cepat melalui terminal:
 
 ```bash
-# Menambahkan watermark default ke dummy KTP
-python watermarker.py -i dummy_ktp.png -o KTP_Watermarked.png
+# Menambahkan watermark default ke dummy document
+python watermarker.py -i dummy_document.png -o document_watermarked.png
 
-# Menambahkan watermark kustom dengan opasitas 30% dan rotasi 45 derajat
-python watermarker.py -i dummy_ktp.png -o KTP_Watermarked.png -t "HANYA UNTUK VERIFIKASI SEBAYA\nPADA 04-06-2026" -op 30 -a 45
+# Menambahkan watermark kustom dengan opasitas 25% dan rotasi 45 derajat
+python watermarker.py -i dummy_document.png -o document_watermarked.png -t "RAHASIA & KONFIDENSIAL\nHANYA UNTUK VERIFIKASI SEBAYA" -op 25 -a 45
 ```
 
 #### Opsi Parameter CLI:
-- `-i`, `--input`: Path gambar KTP asal (Wajib)
+- `-i`, `--input`: Path gambar dokumen asal (Wajib)
 - `-o`, `--output`: Path untuk menyimpan gambar hasil watermark (Wajib)
 - `-t`, `--text`: Teks watermark (gunakan `\n` untuk baris baru)
 - `-op`, `--opacity`: Transparansi watermark (0 - 100, default: 30)
@@ -67,8 +67,8 @@ python watermarker.py -i dummy_ktp.png -o KTP_Watermarked.png -t "HANYA UNTUK VE
 ---
 
 ## Contoh File untuk Uji Coba
-Kami menyediakan skrip untuk membuat gambar KTP dummy kosong (tanpa data sensitif asli Anda) agar Anda bisa langsung mencoba fitur aplikasi:
+Kami menyediakan skrip untuk membuat gambar dokumen dummy kosong (tanpa data sensitif asli Anda) agar Anda bisa langsung mencoba fitur aplikasi:
 ```bash
 python generate_dummy.py
 ```
-Perintah di atas akan menghasilkan berkas `dummy_ktp.png`.
+Perintah di atas akan menghasilkan berkas `dummy_document.png`.

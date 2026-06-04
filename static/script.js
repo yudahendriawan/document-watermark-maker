@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formattedDate = `${dd}-${mm}-${yyyy}`;
     
     // Set default text area value dengan tanggal hari ini
-    const defaultText = `KTP UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA ${formattedDate}`;
+    const defaultText = `DOKUMEN UNTUK VERIFIKASI\n[NAMA LAYANAN]\nPADA ${formattedDate}`;
     watermarkText.value = defaultText;
     
     // ----------------------------------------------------

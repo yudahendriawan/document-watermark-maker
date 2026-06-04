@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from watermarker import add_watermark
 
-app = FastAPI(title="Local KTP Watermark Server")
+app = FastAPI(title="Local Document Watermark Server")
 
 # Izinkan CORS jika ada kebutuhan integrasi
 app.add_middleware(
