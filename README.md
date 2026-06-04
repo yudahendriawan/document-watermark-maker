@@ -1,5 +1,7 @@
 # KTP Shield - Secure Local Watermarker
 
+![Dashboard Screenshot](dashboard.png)
+
 Aplikasi Python sederhana, aman, dan 100% lokal untuk memberikan watermark pada scan/foto KTP (Kartu Tanda Penduduk) guna melindungi data pribadi Anda dari penyalahgunaan. Semua proses dilakukan di komputer Anda tanpa mengunggah file ke internet.
 
 ## Fitur Utama
